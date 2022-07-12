@@ -89,19 +89,21 @@ assert offervalid(6,9122022,False) == False
 # bonus neither the username or password can start or end with whitespace
 
 def username_and_password(name,password):
-    a = (strusername = str(name))
-    b = (strpassword = str(password))
-    c = (strpassword >= 5)
-    d = (strusername <= 20)
-    e = (strpassword != strusername)
-    f = (strusername != strpassword)
-    g = (strusername[0,-1] != " ")
-    h = (strpassword[0,-1] != " ")
-    if a or b or c or d or e or f or g or h == False:
+    strusername = str(name)
+    strpassword = str(password)
+    a = (len(strpassword) >= 5)
+    b = (len(strusername) <= 20)
+    c = (strpassword != strusername)
+    d = (strusername != strpassword)
+    e = strusername.strip() == strusername
+    f = strpassword.strip() == strpassword
+    if a == False or b == False or c == False or d == False or e == False or f == False:
         print("Please try another username or password")
+        return False
     else:
         print("Your Username and Password have been accepted")
+        return True
 
 
 
-assert username_and_password("codeup","notastrongpassword")
+assert username_and_password("codeup","notastrongpassword") == True
