@@ -6,7 +6,11 @@ def movierental(days):
     print("$ " + str(rentalfee) + " for " + str(days) + " day(s)")
     return rentalfee
 
-
+lm = movierental(3) #(giving 9)
+bb = movierental(5) #(giving 15)
+herc = movierental(1) # (giving 3)
+total = lm + bb + herc
+print("$" + str(total) + " to rent the movies.")
 
 assert movierental(3) == 9
 assert movierental(5) == 15
