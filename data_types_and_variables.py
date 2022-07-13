@@ -94,10 +94,9 @@ def username_and_password(name,password):
     a = (len(strpassword) >= 5)
     b = (len(strusername) <= 20)
     c = (strpassword != strusername)
-    d = (strusername != strpassword)
-    e = strusername.strip() == strusername
-    f = strpassword.strip() == strpassword
-    if a == False or b == False or c == False or d == False or e == False or f == False:
+    d = strusername.strip() == strusername
+    e = strpassword.strip() == strpassword
+    if a == False or b == False or c == False or d == False or e == False:
         print("Please try another username or password")
         return False
     else:
