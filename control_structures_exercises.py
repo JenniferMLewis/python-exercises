@@ -103,6 +103,8 @@ for d in multable:
     print(answer)
 
 
+# ***EASIER WAY FOR THESE for x in range(user_numb, to_number, by_number)***
+# **Will fix this up later**
 
 # Break and continue
 
@@ -192,6 +194,12 @@ for n in range(1,101):
     else:
         print(n)
 
+# ** There is another way with 
+# if --> print FizzBuzz    continue
+# if --> print Fizz     continue 
+# if --> print Buzz     continue
+# print(x)
+
 
 # Display a table of powers.
 
@@ -276,6 +284,13 @@ while cont == "Y":
         print("Please enter a valid numerical value")
 
 
+# Another way to break out.
+# At the end after  loop's last if statement, new if statement:
+# user_yn = input('Do you wish to continue? (y/n))
+# if user_yn.lower() != 'y"
+# break
+# for anything except 'y' the program will stop.
+
 # Create a list of dictionaries where each dictionary represents a book that you have read. Each 
 # dictionary in the list should have the keys title, author, and genre. Loop through the list 
 # and print out information about each book.
@@ -317,21 +332,26 @@ books = [
 
 gen = input("Please Enter a Genre you'd like to read:")
 g = gen.lower()
-if g == "horror":
-    for x in books:
-        if x['genre'] == "Horror":
-            print(f" Book Title: {x['title']}")
-elif g == "reference":
-    for x in books:
-        if x['genre'] == "Refrence":
-            print(f" Book Title: {x['title']}")
-elif g == "adventure":
-    for x in books:
-        if x['genre'] == "Adventure":
-            print(f" Book Title: {x['title']}")
-elif g == "mystery":
-    for x in books:
-        if x['genre'] == "Mystery":
+if book['genre'] == g:
             print(f" Book Title: {x['title']}")
 else:
     print("The only available Genres are : Horror, Mystery, Adventure, and Reference.")
+
+
+# Original, over complicated... this is so much lovely.
+#    
+# if g == "horror":
+#    for x in books:
+#        if x['genre'] == "Horror":
+#            print(f" Book Title: {x['title']}")
+# elif g == "reference":
+#     for x in books:
+#        if x['genre'] == "Refrence":
+#            print(f" Book Title: {x['title']}")
+# elif g == "adventure":
+#    for x in books:
+#        if x['genre'] == "Adventure":
+#            print(f" Book Title: {x['title']}")
+# elif g == "mystery":
+#    for x in books:
+#        if x['genre'] == "Mystery":
