@@ -236,7 +236,7 @@ def cumulative_sum(list):
 
 def cumulative_sum(list):
     newlist = []
-    for n in my list:
+    for n in list:
         cumusum = sum(list[:n])
         newlist.append(cumusum)
     return newlist
